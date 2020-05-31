@@ -13,9 +13,7 @@ services:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       - /opt/certs:/etc/nginx/certs
     networks:
-      - financiera-net
-#      - tunimex-net
+      - web-net
 
 networks:
-   financiera-net:
-#   tunimex-net:
+   web-net:
