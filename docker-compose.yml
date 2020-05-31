@@ -25,7 +25,7 @@ financiera-web:
     networks:
       - financiera-net
       
-  financiera-ui:
+financiera-ui:
     image: financiera-ui
     container_name: financiera-ui
     restart: unless-stopped
@@ -34,7 +34,7 @@ financiera-web:
     networks:
       - financiera-net
 
-  financiera-api:
+financiera-api:
     image: financiera-api
     container_name: financiera-api
     restart: unless-stopped
@@ -43,7 +43,7 @@ financiera-web:
     networks:
       - financiera-net
 
-  postgres:
+postgres:
     image: postgres:11.6-alpine
     container_name: postgres
     restart: unless-stopped
@@ -60,7 +60,7 @@ financiera-web:
     networks:
       - financiera-net
 
-  pgadmin4:
+pgadmin4:
     image: dpage/pgadmin4
     container_name: pgadmin4
     restart: unless-stopped
