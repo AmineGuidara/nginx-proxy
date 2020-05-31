@@ -70,7 +70,8 @@ pgadmin4:
     volumes:
        - pgadmin:/root/.pgadmin
     networks:
-      - financiera-net     
+      - financiera-net    
+      
 tunimex-web:
     image: tunimex-web
     container_name: tunimex-web
