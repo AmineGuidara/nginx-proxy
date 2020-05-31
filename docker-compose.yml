@@ -15,22 +15,7 @@ services:
     networks:
       - financiera-net
       - tunimex-net
-      
-financiera-web:
-    image: financiera-web
-    container_name: financiera-web
-    restart: unless-stopped
-#    ports:
-#     - 82:80
-    networks:
-      - financiera-net
-      
+
 networks:
    financiera-net:
    tunimex-net:
-
-volumes:
-  postgresql:
-  postgresql_data:
-  pgadmin:
-
