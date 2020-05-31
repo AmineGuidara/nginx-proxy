@@ -24,7 +24,6 @@ financiera-web:
 #     - 82:80
     networks:
       - financiera-net
-      
 financiera-ui:
     image: financiera-ui
     container_name: financiera-ui
