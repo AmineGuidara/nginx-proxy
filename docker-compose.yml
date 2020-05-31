@@ -14,8 +14,8 @@ services:
       - /opt/certs:/etc/nginx/certs
     networks:
       - financiera-net
-      - tunimex-net
+#      - tunimex-net
 
 networks:
    financiera-net:
-   tunimex-net:
+#   tunimex-net:
