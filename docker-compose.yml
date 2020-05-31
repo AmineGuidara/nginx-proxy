@@ -24,63 +24,7 @@ financiera-web:
 #     - 82:80
     networks:
       - financiera-net
-financiera-ui:
-    image: financiera-ui
-    container_name: financiera-ui
-    restart: unless-stopped
-#    ports:
-#      - 80:80
-    networks:
-      - financiera-net
-
-financiera-api:
-    image: financiera-api
-    container_name: financiera-api
-    restart: unless-stopped
-    ports:
-      - 8181
-    networks:
-      - financiera-net
-
-postgres:
-    image: postgres:11.6-alpine
-    container_name: postgres
-    restart: unless-stopped
-#    ports:
-#      - 5432:5432
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=josue123
-      - POSTGRES_DB=financial
-    volumes:
-      - postgresql:/var/lib/postgresql
-      # This needs explicit mapping due to https://github.com/docker-library/postgres/blob/4e48e3228a30763913ece952c611e5e9b95c8759/Dockerfile.template#L52
-      - postgresql_data:/var/lib/postgresql/data
-    networks:
-      - financiera-net
-pgadmin4:
-    image: dpage/pgadmin4
-    container_name: pgadmin4
-    restart: unless-stopped
-    environment:
-      - PGADMIN_DEFAULT_EMAIL=guidara.amine@gmail.com
-      - PGADMIN_DEFAULT_PASSWORD=admin123.
-#    ports:
-#      - 8080:80
-    volumes:
-       - pgadmin:/root/.pgadmin
-    networks:
-      - financiera-net    
       
-tunimex-web:
-    image: tunimex-web
-    container_name: tunimex-web
-    ports:
-         - 81:80
-    restart: unless-stopped
-    networks:
-      - tunimex-net
-
 networks:
    financiera-net:
    tunimex-net:
