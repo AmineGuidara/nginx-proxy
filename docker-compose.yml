@@ -58,7 +58,6 @@ postgres:
       - postgresql_data:/var/lib/postgresql/data
     networks:
       - financiera-net
-
 pgadmin4:
     image: dpage/pgadmin4
     container_name: pgadmin4
@@ -71,8 +70,7 @@ pgadmin4:
     volumes:
        - pgadmin:/root/.pgadmin
     networks:
-      - financiera-net
-      
+      - financiera-net     
 tunimex-web:
     image: tunimex-web
     container_name: tunimex-web
